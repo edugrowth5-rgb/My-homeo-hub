@@ -638,6 +638,22 @@
     function scrollToTop() { document.querySelector('main').scrollTop = 0; }
 
     window.onload = loadApp;
+
+function acceptDisclaimer() {
+    // Popup ko band karne ke liye
+    document.getElementById('disclaimer-modal').style.display = "none";
+    
+    // Taaki baar-baar refresh karne par popup na aaye (Session Storage)
+    sessionStorage.setItem('disclaimerAccepted', 'true');
+}
+
+// Page load hone par check karein ki user ne pehle accept kiya hai ya nahi
+window.addEventListener('DOMContentLoaded', () => {
+    if (sessionStorage.getItem('disclaimerAccepted') === 'true') {
+        document.getElementById('disclaimer-modal').style.display = "none";
+    }
+});
+    
 </script>
 
     <script>
