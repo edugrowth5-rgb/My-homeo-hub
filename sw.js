@@ -1,4 +1,4 @@
-const cacheName = 'homeoguide-v1';
+const cacheName = 'homeoguide-v1.1';
 const assets = [
   './',
   './index.html',
