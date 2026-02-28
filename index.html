@@ -604,5 +604,14 @@
     window.onload = loadApp;
 </script>
 
+    <script>
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+        .then(() => console.log("HomeoGuide PWA Ready!"))
+        .catch(err => console.log("SW Error:", err));
+    }
+</script>
+    
 </body>
 </html>
